@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+#about{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    display: grid;
+    width: 100vw;
+    height: auto;
+}
+
+#about .about-me{
+    width: 80vw;
+}
+
+.about-me p{
+    margin: 1em;
+}
+
+#about h2{
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(200, 134, 251);
+    font-size: 3rem;
+    margin-top: 1em;
+}
+
+@media (max-width: 800px) {
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+    }
+}
+

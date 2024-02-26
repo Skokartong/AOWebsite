@@ -1,0 +1,148 @@
+.modal-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4em;
+    gap: 2em;
+    height: fit-content;
+}
+
+.portfolio-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 1em;
+    font-size: 2rem;
+}
+
+.modal-1,
+.modal-2,
+.modal-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    height: 18em;
+    border-radius: 50%;
+    background-color: aliceblue;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-1 {
+    background-size: cover;
+    background-image: url(https://www.reshot.com/preview-assets/illustrations/HSJFK2XZT9/investment-app-concept-HSJFK2XZT9-w1600.jpg);
+}
+
+.modal-2 {
+    background-size: cover;
+    background-image: url(https://www.reshot.com/preview-assets/illustrations/D9UYJ5ZXWC/classroom-learning-D9UYJ5ZXWC-w1600.jpg);
+}
+
+.modal-3 {
+    background-size: cover;
+    background-image: url(https://www.reshot.com/preview-assets/illustrations/7UK48SGFXJ/violinist-playing-7UK48SGFXJ-w1600.jpg);
+}
+
+.overlay {
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3em;
+    background: #fff;
+    width: 80vw;
+    max-width: 600px;
+    transition: all 0.8s ease-in-out;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.popup .close:hover {
+    color: #d29ff9;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.popup p {
+    font-size: 1.5rem;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.button {
+    font-size: 2em;
+    padding: 0.5em;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #d29ff9;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transform: scale(1.2);
+    color: #d29ff9;
+    background: #ffffff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup .content {
+    overflow-y:scroll;
+}
+
+@media screen and (max-width: 800px) {
+    .modal-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}

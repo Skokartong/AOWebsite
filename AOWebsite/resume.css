@@ -1,0 +1,139 @@
+#resume h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2em;
+    gap: 10em;
+}
+
+.cv-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.cv-title h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: rgb(196, 246, 236);
+    color: rgb(37, 161, 161);
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.cv-title h1:hover{
+    background-color: rgb(252, 238, 218);
+    color: rgb(235, 163, 75);
+}
+
+.work-title, .education-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 2em;
+}
+
+.skills-title{
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    padding: 2em;
+}
+
+.work, .education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    gap: 2em;
+}
+
+.chas, .kth, .london, .circle-k, .okq8, .fri{
+    display: flex;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    gap: 1em;
+    list-style: none;
+} 
+
+.kth{
+    margin-left: 0.5em;
+}
+
+.fri{
+    margin-left: 1.8em;
+    margin-bottom: 5em;
+}
+
+.kth img {
+    width: 6em;
+}
+
+.chas img {
+    width: 7em;
+}
+
+.london img {
+    width: 15em;
+}
+
+.circle-k img {
+    width: 6em;
+}
+
+.okq8 img {
+    width: 12em;
+}
+
+.fri img{
+    width: 9em;
+}
+
+@media (max-width: 800px) {
+    #resume {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .skills {
+        flex-direction: column;
+        gap: 2em;
+        width: 100vw;
+    }
+
+    .education, .work {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .education h2, .work h2{
+        display: none;
+    }
+
+    .education li, .work li{
+        font-size: 1.3rem;
+    }
+
+     .education,
+    .skills>div,
+    .work {
+        width: 100vw;
+        margin-left: 0;
+    } 
+}

@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#topnav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    padding: 0 1em;
+    background-color: rgb(203, 149, 239);
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 5em;
+}
+
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    list-style: none;
+}
+
+.menu li a {
+    margin: 0 2em;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.06em;
+    background-color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transition: width 0.1s ease-in-out, left 0.1s ease-in-out;
+}
+
+.menu li a:hover::after {
+    transform: scale(1.2);
+    width: 100%;
+    left: 0;
+}
+
+.logo img {
+    width: 4em;
+}
+
+.moon {
+margin: auto 0;
+}
+
+.moon i{
+    font-size: 3em;
+    color: white;
+}
+
+.topnav ul li {
+    list-style: none;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.ham-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .ham-menu {
+        display: block;
+        position: absolute;
+        right: 5%;
+        font-size: 2.5em;
+        z-index: 1;
+    }
+
+    .menu li {
+        position: static;
+    }
+
+    .moon{
+margin: auto calc(50%+40px);
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        font-family: 'Josefin Sans', sans-serif;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 100%;
+        text-align: center;
+        font-size: 2rem;
+        background-color: rgb(197, 114, 246);
+        color: white;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    #nav-toggle:checked~.menu {
+        background-color: rgb(190, 101, 250);
+        padding-top: 6em;
+        bottom: 0;
+    }
+
+}
+    #home,
+    #about {
+        display: flex;
+        place-items: center;
+    }
+
+    #home {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #home {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .info {
+        margin-right: 7em;
+        text-align: center;
+    }
+
+    .redirection ul li {
+        font-family: "Josefin Sans", sans-serif;
+        display: inline;
+    }
+
+    .redirection li a {
+        color: black;
+        text-decoration: none;
+        margin: 0.5em;
+        font-size: 1rem;
+        padding: 0.5em;
+        position: relative;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        width: 7em;
+        height: 7em;
+        line-height: 6em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .redirection li:nth-child(1) a {
+        background-color: rgb(176, 188, 255);
+    }
+
+    .redirection li:nth-child(2) a {
+        background-color: rgb(212, 184, 247);
+    }
+
+    .redirection li:nth-child(3) a {
+        background-color: rgb(196, 246, 236);
+    }
+
+    .redirection li:nth-child(4) a {
+        background-color: rgb(248, 185, 238);
+    }
+
+    .redirection li a:hover {
+        transform: scale(1.2);
+    }
+
+    @keyframes wave {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(20deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        75% {
+            transform: rotate(20deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .em-wave {
+        transition: transform 0.3s ease;
+    }
+
+    .em-wave:hover {
+        animation: wave 1s infinite;
+    }
+
+    #home h2 {
+        font-size: 2.5rem;
+        color: rgb(221, 118, 252);
+        font-family: "DM Serif Display", serif;
+        margin: 0.5em;
+    }
+
+    #home h3 {
+        margin-top: 1.2em;
+    }
+
+    .profile-picture {
+        margin-left: 6em;
+        transition: 0.2s ease;
+    }
+
+    .profile-picture:hover {
+        transform: rotate(180deg);
+    }
+
+    #home .profile-picture img {
+        width: 20em;
+        border-radius: 50%;
+        box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    #footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 2em;
+    }
+
+    #footer ul li:hover {
+        transform: scale(1.2);
+    }
+
+    #footer ul li {
+        font-size: 3em;
+        margin-right: 0.5em;
+    }
+
+    @media (max-width: 800px) {
+        #home {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: 100vw;
+        }
+
+        .info {
+            width: 80vw;
+            margin-right: 0;
+            margin: 2em;
+        }
+
+        .profile-picture {
+            margin-left: 0;
+            margin-top: 4em;
+        }
+    }
